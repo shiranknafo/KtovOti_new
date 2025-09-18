@@ -9,7 +9,6 @@ SOUND, LETTER, OPTIONS = random_letter_sound.choose_sound()
 
 root = Tk()
 
-
 root.minsize(consts.ROOT_HEIGHT, consts.ROOT_WIDTH)
 root.maxsize(consts.ROOT_HEIGHT, consts.ROOT_WIDTH)
 
@@ -96,7 +95,5 @@ letter4 = Button(answer_frame, textvariable=btn_text4)
 letter4.bind("<Button-1>", answer_4)
 letter4.config(font=("Courier", 40),fg="black",bg="lightblue")
 letter4.grid(row=0, column=3)
-
-
 
 root.mainloop()
