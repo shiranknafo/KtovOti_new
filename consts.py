@@ -41,3 +41,6 @@ LETTERS_SOUNDS_DICT = {'A' : 'letter_sounds/alphasounds-a.mp3', 'B' : 'letter_so
                        'U' : 'letter_sounds/btalpha-13-u-dotted.mp3', 'V' : 'letter_sounds/alphasounds-v.mp3',
                        'W' : 'letter_sounds/alphasounds-w.mp3', 'X' : 'letter_sounds/alphasounds-x.mp3',
                        'Y' : 'letter_sounds/alphasounds-y.mp3', 'Z' : 'letter_sounds/alphasounds-z.mp3'}
+
+ROOT_HEIGHT = 800
+ROOT_WIDTH = 500
