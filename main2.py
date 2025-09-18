@@ -63,7 +63,7 @@ def myWindow1():
         options = random.sample(temp, 3)
         return options
 
-    def play_game():
+    def play_game(event):
         main_sound, main_letter, main_options = choose_sound()
 
         root = Tk()
@@ -158,8 +158,9 @@ def myWindow1():
     button1 = Button(window, text='כתיבה', command = writing_class, bg='brown', fg='white',
                              font=('helvetica', 9, 'bold'))
     canvas1.create_window(200, 180, window=button1)
-    button2 = Button(window, text='שמע', command = play_game, bg='brown', fg='white',
+    button2 = Button(window, text='שמע', bg='brown', fg='white',
                     font=('helvetica', 9, 'bold'))
+    button2.bind("<Button-1>", play_game)
     canvas1.create_window(300, 180, window=button2)
 
 
