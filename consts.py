@@ -39,7 +39,7 @@ LETTERS_SOUNDS_DICT = {'A' : 'letter_sounds/alphasounds-a.mp3', 'B' : 'letter_so
                        'M' : 'letter_sounds/alphasounds-m.mp3', 'N' : 'letter_sounds/alphasounds-n.mp3',
                        'O' : 'letter_sounds/alphasounds-o-sh.mp3', 'P' : 'letter_sounds/alphasounds-p-2.mp3',
                        'Q' : 'letter_sounds/alphasounds-q.mp3', 'R' : 'letter_sounds/alphasounds-r.mp3',
-                       'S' : 'letter_sounds/alphasounds-q.mp3', 'T' : 'letter_sounds/alphasounds-t.mp3',
+                       'S' : 'letter_sounds/alphasounds-s.mp3', 'T' : 'letter_sounds/alphasounds-t.mp3',
                        'U' : 'letter_sounds/btalpha-13-u-dotted.mp3', 'V' : 'letter_sounds/alphasounds-v.mp3',
                        'W' : 'letter_sounds/alphasounds-w.mp3', 'X' : 'letter_sounds/alphasounds-x.mp3',
                        'Y' : 'letter_sounds/alphasounds-y.mp3', 'Z' : 'letter_sounds/alphasounds-z.mp3'}
