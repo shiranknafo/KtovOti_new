@@ -9,19 +9,19 @@ SOUND, LETTER, OPTIONS = random_letter_sound.choose_sound()
 
 root = Tk()
 
-root.geometry(f"{consts.ROOT_HEIGHT}x{consts.ROOT_WIDTH}")
+
 root.minsize(consts.ROOT_HEIGHT, consts.ROOT_WIDTH)
 root.maxsize(consts.ROOT_HEIGHT, consts.ROOT_WIDTH)
 
 sound_frame = Frame(root)
-sound_frame.pack(side=TOP, fill=X)
+sound_frame.pack(side=TOP, padx=50, pady=50)
 
 answer_frame = Frame(root)
-answer_frame.pack(side=BOTTOM, fill=X)
+answer_frame.pack(side=TOP, padx=50, pady=50)
 
 pygame.mixer.init()
 
-def choose_sound():
+def start():
     temp = OPTIONS.copy()
     for i in range(4):
         letter = random.choice(temp)
@@ -34,10 +34,10 @@ def choose_sound():
             btn_text3.set(letter)
         else:
             btn_text4.set(letter)
+
+def play_sound():
     pygame.mixer.music.load(SOUND)
     pygame.mixer.music.play(loops=0)
-
-
 
 def check_answer(text):
     if text == LETTER:
@@ -61,28 +61,41 @@ def answer_4(event):
     print(btn_text4.get())
     check_answer(btn_text4.get())
 
-sound_label = Label(sound_frame, text="איזה אות עושה את הצליל: ")
-sound_label.pack(side=RIGHT)
-play_button = Button(sound_frame, text="הפעל",command=choose_sound)
-play_button.pack(side=RIGHT)
+btn_start = Button(sound_frame, text=":שחק",command=start)
+btn_start.config(font=("Courier", 15),fg="black",bg="green")
+btn_start.pack(side=TOP)
 
+sound_label = Label(sound_frame, text=" :איזה אות עושה את הצליל ")
+sound_label.config(font=("Courier", 25))
+sound_label.pack(side=TOP)
+sound_label.pack(side=RIGHT)
+play_button = Button(sound_frame, text="הפעל",command=play_sound)
+play_button.config(font=("Courier", 25),fg="black",bg="yellow")
+play_button.pack(side=RIGHT)
 
 btn_text1 = StringVar()
 letter1 = Button(answer_frame, textvariable=btn_text1)
 letter1.bind("<Button-1>", answer_1)
-letter1.pack(side=LEFT)
+letter1.config(font=("Courier", 40),fg="black",bg="lightblue")
+letter1.grid(row=0, column=0)
+
 btn_text2 = StringVar()
 letter2 = Button(answer_frame, textvariable=btn_text2)
 letter2.bind("<Button-1>", answer_2)
-letter2.pack(side=LEFT)
+letter2.config(font=("Courier", 40),fg="black",bg="lightblue")
+letter2.grid(row=0, column=1)
+
 btn_text3 = StringVar()
 letter3 = Button(answer_frame, textvariable=btn_text3)
 letter3.bind("<Button-1>", answer_3)
-letter3.pack(side=LEFT)
+letter3.config(font=("Courier", 40),fg="black",bg="lightblue")
+letter3.grid(row=0, column=2)
+
 btn_text4 = StringVar()
 letter4 = Button(answer_frame, textvariable=btn_text4)
 letter4.bind("<Button-1>", answer_4)
-letter4.pack(side=LEFT)
+letter4.config(font=("Courier", 40),fg="black",bg="lightblue")
+letter4.grid(row=0, column=3)
 
 
 
