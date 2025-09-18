@@ -1,7 +1,4 @@
 IMAGE_SIZE = 150
-import animals_dict
-ANIMALS_DICT=animals_dict.dict1
-print(animals_dict)
 LETTERS_IMAGES_DICT = {'A' : 'Letters_images/A.jpg', 'B' : 'Letters_images/B.jpg',
                        'C' : 'Letters_images/C.jpg', 'D' : 'Letters_images/D.jpg',
                        'E' : 'Letters_images/E.jpg', 'F' : 'Letters_images/F.jpg',
@@ -44,5 +41,21 @@ LETTERS_SOUNDS_DICT = {'A' : 'letter_sounds/alphasounds-a.mp3', 'B' : 'letter_so
                        'W' : 'letter_sounds/alphasounds-w.mp3', 'X' : 'letter_sounds/alphasounds-x.mp3',
                        'Y' : 'letter_sounds/alphasounds-y.mp3', 'Z' : 'letter_sounds/alphasounds-z.mp3'}
 
+ANIMALS_DICT = {'A' : "animal_pictures/alpaca.png", "B" : "animal_pictures/bat.png",
+                'C' : "animal_pictures/cat.jpg", 'D' : "animal_pictures/dog.png",
+                'E' : "animal_pictures/elefant.png", 'F' : "animal_pictures/fish.png",
+                'G' : "animal_pictures/giraffe.png", 'H' : "animal_pictures/horse.png",
+                'I' : "animal_pictures/iguana.png", 'J' : "animal_pictures/jellyfish.png",
+                'K' : "animal_pictures/kangaroo.png", 'L' : "animal_pictures/lion.png",
+                'M' : "animal_pictures/monkey.jpg", 'N' : "animal_pictures/narwhal.png",
+                'O' : "animal_pictures/owl.png", 'P' : "animal_pictures/penguin.png",
+                'Q' : "animal_pictures/quoll.png", 'R' : "animal_pictures/rabbit.png",
+                'S' : "animal_pictures/shark.png", 'T' : "animal_pictures/tiger.png",
+                'U' : "animal_pictures/unicorn.png", 'V' : "animal_pictures/viper.png",
+                'W' : "animal_pictures/wolf.png", 'X' : "animal_pictures/xerus.png",
+                'Y' : "animal_pictures/yak.png", 'Z' : "animal_pictures/zebra.png"}
+
 ROOT_HEIGHT = 800
 ROOT_WIDTH = 500
+
+curr_letter = ''
