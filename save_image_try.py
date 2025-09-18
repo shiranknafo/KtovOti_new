@@ -29,6 +29,6 @@ draw=ImageDraw.Draw(image1)
 cv.pack(expand=YES,fill=BOTH)
 cv.bind("<B1-Motion>",paint)
 
-button=Button(text="save",command=save)
+button=Button(root, text="save",command=save)
 button.pack()
 root.mainloop()

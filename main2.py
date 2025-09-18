@@ -22,7 +22,6 @@ def myWindow1():
     label1 = Label(window, text='ברוכים הבאים לכתובותי')
     label1.config(font=('helvetica', 20, 'bold'))
     canvas1.create_window(200, 25, window=label1)
-
     label2 = Label(window, text=':בחר שיעור')
     label2.config(font=('helvetica', 15))
     canvas1.create_window(200, 100, window=label2)
@@ -36,14 +35,15 @@ def myWindow1():
         Label(new_window, text=":תכתוב את האות הבאה").pack(pady=20)
         label1 = Label(new_window, text=l, font=('helvetica', 15, 'bold'))
         label1.pack()
-        com = writing_letter.compare_images()
-        if com:
-            label4 = Label(new_window, text="כל הכבוד", font=('helvetica', 15, 'bold'))
-        else:
-            label4 = Label(new_window, text="בוז", font=('helvetica', 15, 'bold'))
-        button = Button(new_window , text='הבא', command = (new_window.destroy, writing_class)).pack(pady=20)
+        button = Button(new_window, text='הבא', command=(writing_class)).pack(pady=20)
 
-        button2 = Button(new_window , text='תפריט', command = new_window.destroy).pack(pady=20)
+        button2 = Button(new_window, text='תפריט', command=new_window.destroy).pack(pady=20)
+        from KtovOti_new import save_image_try
+        com = writing_letter.compare_images(l)
+        if com:
+            messagebox.showinfo("כל הכבוד!", "תשובה נכונה")
+        else:
+            messagebox.showinfo("בוז!", "תשובה נכונה")
 
 
 
@@ -52,9 +52,9 @@ def myWindow1():
     button1 = Button(window, text='כתיבה', command = writing_class, bg='brown', fg='white',
                              font=('helvetica', 9, 'bold'))
     canvas1.create_window(200, 180, window=button1)
-    button2 = Button(window, text='שמע', command = sound_letter, bg='brown', fg='white',
-                     font=('helvetica', 9, 'bold'))
-    canvas1.create_window(200, 180, window=button2)
+    #button2 = Button(window, text='שמע', command = sound_letter, bg='brown', fg='white',
+              #       font=('helvetica', 9, 'bold')).pack(pady=20)
+    #canvas1.create_window(200, 180, window=button2)
 
     window.mainloop()
 
