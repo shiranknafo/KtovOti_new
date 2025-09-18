@@ -42,5 +42,6 @@ def compare_two_images(image_from_user, image_from_dict):
     # find difference
     diff = ImageChops.difference(im1.convert('RGB'), im2.convert('RGB'))
     num_of_diff_pixel = get_num_of_diff_pixel(diff)//3
+    diff.show()
     return num_of_diff_pixel < consts.IMAGE_SIZE * consts.IMAGE_SIZE * 0.01
 
