@@ -15,5 +15,3 @@ def compare_images():
     letter_image = get_image()
     letter_drawing = 'letter_drawing.png'
     return image_coparison.compare_two_images(letter_image, letter_drawing)
-
-
