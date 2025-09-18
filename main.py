@@ -323,5 +323,5 @@ y = (screen_height / 2) - (h / 2)
 root.geometry('%dx%d+%d+%d' % (w, h, x, y))
 root.minsize(1150, 600)
 
-setup('Test.png')
+setup("KtovOti/animal_pictures/alpaca.png")
 root.mainloop()

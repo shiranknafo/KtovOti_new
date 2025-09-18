@@ -52,4 +52,5 @@ img=Image.open("animal_pictures/xerus.png")
 dict1["x"]=img
 img=Image.open("animal_pictures/yak.png")
 dict1["y"]=img
+dict1["j"]="animal_pictures/jellyfish.png"
 
