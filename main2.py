@@ -1,5 +1,7 @@
 from tkinter import *
 
+from KtovOti_new import sound_letter
+
 from KtovOti_new import writing_letter
 from writing_letter import *
 import tkinter.font as tkFont
@@ -34,17 +36,25 @@ def myWindow1():
         Label(new_window, text=":תכתוב את האות הבאה").pack(pady=20)
         label1 = Label(new_window, text=l, font=('helvetica', 15, 'bold'))
         label1.pack()
-        #com = writing_letter.compare_images()
-        #if com:
-         #   label4 = Label(new_window, text="כל הכבוד", font=('helvetica', 15, 'bold'))
+        com = writing_letter.compare_images()
+        if com:
+            label4 = Label(new_window, text="כל הכבוד", font=('helvetica', 15, 'bold'))
+        else:
+            label4 = Label(new_window, text="בוז", font=('helvetica', 15, 'bold'))
         button = Button(new_window , text='הבא', command = (new_window.destroy, writing_class)).pack(pady=20)
 
         button2 = Button(new_window , text='תפריט', command = new_window.destroy).pack(pady=20)
 
 
-    button1 = Button(text='שמע', command = writing_class, bg='brown', fg='white',
+
+
+
+    button1 = Button(window, text='כתיבה', command = writing_class, bg='brown', fg='white',
                              font=('helvetica', 9, 'bold'))
     canvas1.create_window(200, 180, window=button1)
+    button2 = Button(window, text='שמע', command = sound_letter, bg='brown', fg='white',
+                     font=('helvetica', 9, 'bold'))
+    canvas1.create_window(200, 180, window=button2)
 
     window.mainloop()
 
