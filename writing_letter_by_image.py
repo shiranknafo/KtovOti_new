@@ -9,7 +9,7 @@ def get_letter():
     return letter
 
 def get_image():
-    return consts.LETTERS_IMAGES_DICT[letter]
+    return consts.ANIMALS_DICT[letter]
 
 def compare_images():
     letter_image = get_image()
