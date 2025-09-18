@@ -1,6 +1,7 @@
 IMAGE_SIZE = 150
 import animals_dict
 ANIMALS_DICT=animals_dict.dict1
+print(animals_dict)
 LETTERS_IMAGES_DICT = {'A' : 'Letters_images/A.jpg', 'B' : 'Letters_images/B.jpg',
                        'C' : 'Letters_images/C.jpg', 'D' : 'Letters_images/D.jpg',
                        'E' : 'Letters_images/E.jpg', 'F' : 'Letters_images/F.jpg',
